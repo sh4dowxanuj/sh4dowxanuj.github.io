@@ -5,16 +5,39 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sh4dow</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Hello</h1>
+    <h1>Hello I'm</h1>
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-container" data-aos="fade-in">
+          <h1>Anuj Thakur</h1>
+          <div id="text-container">
+            <span id="static-text"> A </span>
+            <span id="changing-text"> Programmer </span>
+        </div>
+    
+        <script>
+            const changingText = document.getElementById("changing-text");
+            const textArray = ["Developer", "Coder", "Software Engineer"]; // Add more text as needed
+            let currentIndex = 0;
+    
+            function updateText() {
+                if (currentIndex < textArray.length) {
+                    changingText.style.opacity = 0; // Fade out
+                    setTimeout(() => {
+                        changingText.textContent = textArray[currentIndex];
+                        changingText.style.opacity = 1; // Fade in
+                        currentIndex++;
+                    }, 500); // Wait for the fade-out animation to complete
+                } else {
+                    currentIndex = 0; // Reset to the first text
+                }
+            }
+    
+            const interval = setInterval(updateText, 2000); // Change the time interval (in milliseconds) as needed
+        </script>
 </body>
 
 </html>
