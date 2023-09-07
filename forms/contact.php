@@ -24,12 +24,12 @@
   $contact->subject = $_POST['subject'];
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
+  
   $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
+    'host' => 'smtp.elasticemail.com',
+    'username' => 'sh4dowanuj@gmail.com',
+    'password' => '28A76B3BB0849F73B56300AE3FFDB8E51688',
+    'port' => '2525'
   );
   */
 
